@@ -21,15 +21,7 @@ RUN git clone https://github.com/Sonerezh/sonerezh.git /usr/share/nginx/sonerezh
 	chmod 775 -R /usr/share/nginx/sonerezh
 RUN cd /usr/share/nginx/sonerezh && composer install 
 
-# Prepare volume
-RUN mkdir /music && \
-	ln -s /usr/share/nginx/sonerezh/app/webroot/img/thumbnails /thumbnails && \
-	chown www-data: /music
-
-VOLUME /music
-VOLUME /thumbnails
-
-# Copy image configuration
+# Copy configuration
 RUN rm -f /etc/nginx/sites-enabled/default
 COPY default /etc/nginx/sites-enabled/default
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf

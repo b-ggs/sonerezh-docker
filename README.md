@@ -2,6 +2,8 @@
 
 This is a fork of the the Git repository of the official Docker image for [Sonerezh](https://www.sonerezh.bzh). See the Hub page for more informations.
 
+It will install sonerezh directly from the master branch and install all required dependances with composer. 
+
 **WARNING**: the Docker image for Sonerezh is still under development. Some functionnality are broken like email notifications for example.
 
 # How to build this image

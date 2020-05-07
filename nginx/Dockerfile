@@ -11,6 +11,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	php-fpm \
 	php-gd \
 	php-zip \
+	php-pdo-sqlite \
 	composer \
 	supervisor
 
@@ -35,6 +36,5 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN mkdir /run/php/
 
 EXPOSE 80 
-EXPOSE 443
 
 CMD ["/usr/bin/supervisord"]

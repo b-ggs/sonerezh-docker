@@ -37,4 +37,4 @@ RUN mkdir /run/php/
 
 EXPOSE 80 
 
-CMD ["/usr/bin/supervisord &"]
+CMD ["/usr/bin/supervisord"]

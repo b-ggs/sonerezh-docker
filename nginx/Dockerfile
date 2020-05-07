@@ -30,7 +30,6 @@ VOLUME /thumbnails
 RUN rm -f /etc/nginx/sites-enabled/default
 COPY default /etc/nginx/sites-enabled/default
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY docker-entrypoint.sh /entrypoint.sh
 
 EXPOSE 80
 

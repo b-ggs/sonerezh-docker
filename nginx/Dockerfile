@@ -29,7 +29,7 @@ VOLUME /thumbnails
 # Copy image configuration
 RUN rm -f /etc/nginx/sites-enabled/default
 COPY default /etc/nginx/sites-enabled/default
-COPY supervisord.conf etc/supervisor/conf.d/supervisord.conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY docker-entrypoint.sh /entrypoint.sh
 
 EXPOSE 80

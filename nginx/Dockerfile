@@ -12,6 +12,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	php-gd \
 	php-zip \
 	php-pdo-sqlite \
+	php-opcache \
 	composer \
 	supervisor
 

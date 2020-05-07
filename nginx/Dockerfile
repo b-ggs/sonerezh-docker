@@ -3,15 +3,14 @@ FROM debian:stable-slim
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install what we need
-RUN apt update && apt upgrade -y && apt install -y \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	git \
-	libav-tools \
 	ffmpeg \
 	flac \
 	nginx \
-	php7-fpm \
-	php7-gd \
-	php7-mysql \
+	php-fpm \
+	php-gd \
+	php-mysql \
 	supervisor
 
 # Install Sonerezh
